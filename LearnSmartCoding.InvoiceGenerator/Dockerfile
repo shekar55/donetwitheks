@@ -5,7 +5,7 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["LearnSmartCoding.InvoiceGenerator/LearnSmartCoding.InvoiceGenerator.csproj", "LearnSmartCoding.InvoiceGenerator/"]
+COPY ["LearnSmartCoding.InvoiceGenerator/LearnSmartCoding.InvoiceGenerator.csproj","LearnSmartCoding.InvoiceGenerator/"]
 RUN dotnet restore "LearnSmartCoding.InvoiceGenerator/LearnSmartCoding.InvoiceGenerator.csproj"
 COPY . .
 WORKDIR "/src/LearnSmartCoding.InvoiceGenerator"
